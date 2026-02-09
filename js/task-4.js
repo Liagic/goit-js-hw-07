@@ -4,11 +4,10 @@ function checkForm(event) {
   const password = event.target.elements.password.value;
   if (email === '' || password === '') {
     alert('All form fields must be filled in');
-    return -1;
+    return;
   }
   event.target.reset();
-  console.log();
-  return { email, password };
+  console.log({ email, password });
 }
 const registerForm = document.querySelector('.login-form');
 registerForm.addEventListener('submit', checkForm);
